@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="./assets/dialog-polyfill-master/dist/dialog-polyfill.css">
   <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
 	<link rel="stylesheet" href="./assets/style/style.css">
-	<script src="./assets/js/app.js"></script>
+	<script src="./assets/js/app2.js"></script>
   <!-- <script src="./assets/dialog-polyfill-master/dist/dialog-polyfill.esm.js"></script> -->
   <script src="./assets/dialog-polyfill-master/dist/dialog-polyfill.js"></script>
   </head>
@@ -20,10 +20,11 @@
         <img src="https://privet-alice.ru/wp-content/uploads/2018/07/24e6ae1f2de672a51791fd2544250854_0x0w.png" class="card-img-top" alt="...">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title"><i class="fas fa-dice"></i>
-            Guess Game</h5>
-          <p class="card-text">I've choosed a random number between 1 and 100. Try to guess it maximum in 10 turns. I'll tell you if your guess was too high or too low.</p>
-          <a id="openG" onclick="openGame()" class="btn btn-primary">Let's Go!</a>
-          <a href="/russian.html" type="button" class="btn btn-outline-danger mt-3 w-50 m-auto">RU</a>
+            Игра "Угадайка"</h5>
+          <p class="card-text text-justify">Я загадал случайное число от 1 до 100. Попробуй угадать его, я даю тебе <span class="text-decoration-underline">10 попыток.</span>  В качестве подсказки, я буду говорить, больше твой ответ загаданного или меньше. </p> 
+          <span class="text-center mb-3">Удачи!</span>
+          <a id="openG" onclick="openGame()" class="btn btn-primary">Поехали!</a>
+          <a href="/index.html" type="button" class="btn btn-outline-danger mt-3 w-50 m-auto">ENG</a>
         </div>
       </div>
     </div>
@@ -35,16 +36,16 @@
 			</div>
             <h1 class="mb-4 text-center mt-3">
                 <i class="fas fa-dice"></i>
-                    Guess Game
+                    Угадайка
             </h1>
     
         <div class="form-group text-center mb-3">
-            <input type="text" class="form-control text-center mb-1" id="myNum" placeholder="From 1 to 100" oninput="isNumber()">
+            <input type="text" class="form-control text-center mb-1" id="myNum" placeholder="От 1 до 100" oninput="isNumber()">
             <small id="noNum" class="text-danger mb-1"></small>
         </div>
-        <button id="numButton" class="text-center btn btn-primary w-50" onclick="guessGame()">Roll the dice!</button>
+        <button id="numButton" class="text-center btn btn-primary w-50" onclick="guessGame()">Попробовать!</button>
         <p class="text-center mt-3" id="outAnswer"></p>
-        <button id="reloadButton" class="text-center btn btn-danger w-50" onclick="newGame()">Restart</button>
+        <button id="reloadButton" class="text-center btn btn-danger w-50" onclick="newGame()">Рестарт</button>
         </div>
 
     </dialog>

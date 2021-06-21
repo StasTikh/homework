@@ -11,6 +11,10 @@ dialog {
     height: 50%;    
 }
 
+.card-text {
+    text-align: justify;
+}
+
 @media (max-width: 768px) {
 
     dialog {
