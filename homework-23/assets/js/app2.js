@@ -29,7 +29,7 @@ function guessGame(){
             document.getElementById('myNum').style.display = "none";
             document.getElementById('numButton').style.display = "none";
             document.getElementById('reloadButton').style.display = "block";
-            answerOut.classList.remove("text-danger");
+            answerOut.classList.remove("text-warning");
             answerOut.classList.remove("fs-4");
             answerOut.classList.add("text-success");
             answerOut.classList.add("fs-3");
