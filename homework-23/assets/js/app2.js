@@ -20,16 +20,21 @@ function closeGame() {
 function guessGame(){ 
     let guessNum = document.getElementById('myNum').value;
     let answerOut = document.getElementById('outAnswer');
+    let isSubmit = document.getElementById('submitForm').value;
     document.getElementById('outAnswer').style.display = "block";
    
     if (guessNum == randomNumber) {
-            answerOut.innerHTML = `Верно! </br> Ты угадал, загаданный номер ${guessNum}! </br> Это была ${guessCount + 1}-я попытка.`;
+            answerOut.innerHTML = `Верно! </br> Ты отгадал - мое число ${guessNum}! </br> Это была ${guessCount + 1}-я попытка.`;
             document.getElementById('myNum').value = '';
             document.getElementById('myNum').style.display = "none";
             document.getElementById('numButton').style.display = "none";
             document.getElementById('reloadButton').style.display = "block";
+            answerOut.classList.remove("text-danger");
+            answerOut.classList.remove("fs-4");
+            answerOut.classList.add("text-success");
+            answerOut.classList.add("fs-3");
     } else if (guessNum < randomNumber){
-        if(guessNum == "") {
+        if(guessNum == "" || isSubmit == "") {
             document.getElementById('numButton').style.display = "none";
             document.getElementById('myNum').value = '';
             noNum.style.display = "block";
@@ -45,18 +50,24 @@ function guessGame(){
             guessCount = guessCount; 
         } else {
             answerOut.innerHTML = `Ты не угадал! </br> Мой номер больше. </br> Это попытка номер: ${guessCount + 1}`;
+            answerOut.classList.add("text-warning");
+            answerOut.classList.add("fs-5");
             guessCount++;
             console.log(guessCount);
             document.getElementById('myNum').value = '';
         }
     } else {
         answerOut.innerHTML = `Ты не угадал! </br> Мой номер меньше. </br> Это попытка номер: ${guessCount + 1}`;
+        answerOut.classList.add("text-warning");
+        answerOut.classList.add("fs-5");
         guessCount++;
         console.log(guessCount);
         document.getElementById('myNum').value = '';
     }
     if (guessCount == 10) {
         answerOut.innerHTML = `Прости! </br> Ты проиграл. </br> Правильный номер: ${randomNumber}`;
+        answerOut.classList.add("text-danger");
+        answerOut.classList.add("fs-3");
         document.getElementById('myNum').style.display = "none"
         document.getElementById('numButton').style.display = "none"
     }

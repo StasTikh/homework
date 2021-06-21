@@ -20,6 +20,7 @@ function closeGame() {
 function guessGame(){ 
     let guessNum = document.getElementById('myNum').value;
     let answerOut = document.getElementById('outAnswer');
+    let isSubmit = document.getElementById('submitForm').value;
     document.getElementById('outAnswer').style.display = "block";
    
     if (guessNum == randomNumber) {
@@ -30,6 +31,10 @@ function guessGame(){
             document.getElementById('myNum').style.display = "none";
             document.getElementById('numButton').style.display = "none";
             document.getElementById('reloadButton').style.display = "block";
+            answerOut.classList.remove("text-danger");
+            answerOut.classList.remove("fs-4");
+            answerOut.classList.add("text-success");
+            answerOut.classList.add("fs-3");
         } else if (guessCount == 1) {
             answerOut.innerHTML = `Correct! </br> You win, number is ${guessNum}! </br> It's was ${guessCount + 1}nd try.`;
             document.getElementById('myNum').value = '';
@@ -48,10 +53,13 @@ function guessGame(){
             document.getElementById('myNum').style.display = "none";
             document.getElementById('numButton').style.display = "none";
             document.getElementById('reloadButton').style.display = "block";
+            answerOut.classList.remove("text-danger");
+            answerOut.classList.remove("fs-4");
+            answerOut.classList.add("text-success");
+            answerOut.classList.add("fs-3");
         }
-
     } else if (guessNum < randomNumber){
-        if(guessNum == "") {
+        if(guessNum == "" || isSubmit == "") {
             document.getElementById('numButton').style.display = "none";
             document.getElementById('myNum').value = '';
             noNum.style.display = "block";
@@ -67,18 +75,24 @@ function guessGame(){
             guessCount = guessCount; 
         } else {
             answerOut.innerHTML = `You wrong! </br> Number is bigger. </br> It's try number ${guessCount + 1}`;
+            answerOut.classList.add("text-warning");
+            answerOut.classList.add("fs-5");
             guessCount++;
             console.log(guessCount);
             document.getElementById('myNum').value = '';
         }
     } else {
         answerOut.innerHTML = `You wrong! </br> Number is smaller. </br> It's try number ${guessCount + 1}`;
+        answerOut.classList.add("text-warning");
+        answerOut.classList.add("fs-5");
         guessCount++;
         console.log(guessCount);
         document.getElementById('myNum').value = '';
     }
     if (guessCount == 10) {
-        answerOut.innerHTML = `Sorry! </br> You lose. </br> Right number: is ${randomNumber}`;
+        answerOut.innerHTML = `Sorry! </br> You lose. </br> Right number is: ${randomNumber}`;
+        answerOut.classList.add("text-danger");
+        answerOut.classList.add("fs-3");
         document.getElementById('myNum').style.display = "none"
         document.getElementById('numButton').style.display = "none"
     }

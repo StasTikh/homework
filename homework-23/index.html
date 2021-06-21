@@ -38,9 +38,11 @@
                     Guess Game
             </h1>
     
-        <div class="form-group text-center mb-3">
-            <input type="text" class="form-control text-center mb-1" id="myNum" placeholder="From 1 to 100" oninput="isNumber()">
+        <div onsubmit="isNumber()" class="form-group text-center mb-3">
+          <form id="submitForm" onsubmit="guessGame(); return false"> 
+            <input type="text" class="form-control text-center mb-1" id="myNum" placeholder="From 1 to 100"  oninput="isNumber()">
             <small id="noNum" class="text-danger mb-1"></small>
+          </form> 
         </div>
         <button id="numButton" class="text-center btn btn-primary w-50" onclick="guessGame()">Roll the dice!</button>
         <p class="text-center mt-3" id="outAnswer"></p>
