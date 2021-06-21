@@ -1,0 +1,39 @@
+* { 
+	box-sizing: border-box;
+	font-family: 'Oxanium', cursive;
+    text-align: justify;
+}
+
+body {
+	margin: 0px;
+}
+
+.top-header {  
+    background-image: url(../img/background-parag1.jpg);
+    background-size: 100%;
+    background-position: center;
+    color: white;
+    text-shadow: 0px 0px 5px white;
+    margin: auto;
+}
+
+.container {
+    margin: 0px auto;
+    width: clamp(576px, 70vw, 1200px);
+}
+
+.header {
+    padding-top: 10px;
+}
+
+.header-parag {
+	padding-bottom: 30px;
+	font-weight: bold;
+}
+
+.pic {
+    width: 100%;
+    height: fit-content;
+	border-radius: 10px;
+	box-shadow: 0px 0px 15px gray;
+}

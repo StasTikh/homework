@@ -1,0 +1,20 @@
+h1 {
+    color: seagreen;
+}
+
+* {
+    border: 2px solid red;
+    box-sizing: border-box;
+}
+
+.lastJob {
+    color: red;
+}
+
+.firstJob {
+    color: yellow;
+}
+
+.graduation {
+    color: turquoise;
+}

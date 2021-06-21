@@ -1,0 +1,24 @@
+.zz {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    
+  }
+
+  .zizou {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    object-fit: cover;
+  }
+
+
+  .first, .second, .third {
+      width: 32%;
+  }
+
+ .lower > p {
+   text-align: justify;
+ }

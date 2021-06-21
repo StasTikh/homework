@@ -1,0 +1,8 @@
+.border-3 {
+    border: 5px dashed rgb(212, 203, 203);
+}
+.card a:hover {
+    border: 1px solid green;
+    box-shadow: 0px 0px 5px green;
+    background-color: rgb(23, 1, 75);
+}

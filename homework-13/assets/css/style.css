@@ -1,0 +1,180 @@
+.first-grid {
+    display: grid;
+    gap: 20px;  
+    padding: 20px;
+    grid-template-rows: 200px;
+    grid-template-columns: repeat(3, 2fr);
+}
+
+.bags, .shoes, .watch {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+.bags:hover, .shoes:hover, .watch:hover, .card:hover, .secondnav>li:hover {
+    text-decoration:underline;
+} 
+
+.bags {
+    background-image: url(../img/bags.jpg);  
+    background-size: cover;
+}
+
+.shoes {
+    background-image: url(../img/boots.jpg);
+    background-size: cover;
+    
+}
+.watch {
+    background-image: url(../img/watch.jpg);
+    background-size: cover;
+}
+
+.second-grid {
+    display: grid;
+    gap: 10px;  
+    padding: 10px;
+    grid-template-columns: repeat(4, 25%)
+    
+}
+
+.card {
+    border: none;
+}
+
+.btn {
+    position: relative;
+    margin-left: 29%;
+}
+
+.secondfooter {
+    display: grid;
+    gap: 15px;
+    padding: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.hr-circle {
+	width: 100%;
+    margin-left: auto;
+	padding: 0;
+	height: 5px;
+	border: none;
+	border-width: 0 0 5px;
+	border-style: solid;
+	border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 1" width="8" height="4"><circle fill="orange" cx="1" cy="0.5" r="0.5"></circle></svg>') 0 0 100% repeat;
+	background-position: 50%;
+	box-sizing: border-box;
+	color: orange;
+}
+
+.footertext {
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+.menu-link {
+    display: none;
+}
+
+.drop {
+    display: none;
+}
+
+.bio {
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    
+    
+    .cont {
+        width: 100%
+        margin: auto
+    }
+    .lastfooter {
+        width: 100%;
+    }
+    .secondfooter {
+        display: none;
+    }
+
+    .footertext {
+        display: inline;
+        width: 100%;
+        border: none;
+    }
+
+    .second-grid {
+        display: inline;
+    }
+
+    .btn {
+    
+         position: relative;
+         margin-left: 32%;
+    }
+
+    .name {
+        font-size:xx-large;
+        text-align: center;
+        font-weight: 900;
+    }
+
+    .main-header {
+        display:none;
+    }
+
+    .secondnav {
+        display: none;
+    }
+
+   .footertext p {
+       border: 2px solid black;
+   }
+
+   .footertext p:first-child {
+    border-bottom: none;
+}
+
+.footertext p:last-child {
+    border-top: none;
+}
+
+
+    .first-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bags, .shoes, .watch {
+        height: 150px;
+        width: 300px;
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    .bag-text, .shoe-text, .watch-text {
+        display: none;
+    }
+    .bag-h2, .shoe-h2, .watch-h2 {
+        font-size: 3rem;
+    }
+
+    .drop {
+        display: block;
+        margin-left: 15%;
+
+    }
+
+    .card-title, .card-text {
+        font-size: 2rem;
+    }
+
+    .first-grid {
+        display: none;
+    }
+}

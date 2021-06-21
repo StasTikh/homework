@@ -1,0 +1,88 @@
+/* font-family: 'Balsamiq Sans', cursive;c!
+font-family: 'Caveat', cursive; ! 
+font-family: 'Marck Script', cursive; !
+font-family: 'Pattaya', sans-serif;
+font-family: 'Reggae One', cursive; !
+font-family: 'Rubik Mono One', sans-serif; !
+font-family: 'Russo One', sans-serif; !
+font-family: 'Seymour One', sans-serif; */ 
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    overflow: auto;
+    text-align: justify;
+}
+
+.parent {
+    margin: 0px auto;
+    width: clamp(576px, 40vw, 1200px);
+}
+
+.poster {
+    height: 100vh;
+    background-image: url(../img/background.jpg);
+    background-size: 100%;
+    background-position: center;
+    border-right: 70px solid yellow;
+    border-left: 70px solid blue;
+    text-align: center;
+}
+
+.second-header, .third-header, .forth-header, .six-header {
+    color: white;
+}
+
+.header {
+    margin-top: 0;
+    padding-top: 20px;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 45px;
+    color: tomato;
+}
+.second-header {
+    font-family: 'Seymour One', sans-serif;;
+    font-size: 20px;
+}
+.third-header {
+    font-family: 'Marck Script', cursive;
+    font-size: 40px;
+}
+.forth-header {
+    font-family: 'Reggae One', cursive;
+    font-size: 25px;
+}
+.fifth-header {
+    color: rgb(189, 83, 64);
+    text-shadow: 0px 0px 5px black;
+    font-size: 30px;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+.six-header {
+    font-family: 'Pattaya', sans-serif; 
+    font-size: 35px;
+}
+
+.seventh-header {
+    font-family: 'Caveat', cursive;
+    background: white;
+    background-size: contain;
+    color: black;
+    transform: rotate(-5deg);
+    font-size: 20px;
+}
+
+.sign {
+    margin-top: 40px;
+    font-family: 'Russo One', sans-serif;
+    padding-left: 400px;
+    font-size: 30px;
+    font-weight: 800 ;
+}
+.sign1 {
+    color: blue;
+}
+
+.sign2 {
+    color: yellow;
+}

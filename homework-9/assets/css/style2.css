@@ -1,0 +1,33 @@
+.border-3 {
+    border: 5px dashed rgb(212, 203, 203);
+}
+.topper  a:first-child {
+        font-size: 1.5rem;
+        font-weight: bold; 
+        margin-right: 30rem;
+        margin-left: 46px;
+        flex-grow: 1;  
+ }
+    
+.topper  a:last-child {
+    margin-right: 45px;
+}
+
+header {
+        align-items: center;
+    
+}
+
+header > a{
+    margin: 10px;
+    text-decoration: none;
+}
+
+.card {
+    width: calc(100% / 4);
+    padding: 10px;
+}
+
+.text-justify p {
+    text-align: justify;
+}

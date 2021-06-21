@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    overflow: none;
+   
+}
+
+.pic {
+    margin: auto;
+    padding: 55px;
+    display: flex;
+    justify-content : center;
+}
+.pic img {
+    width: 250px;
+    height: 350px;
+}
+

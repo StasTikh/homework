@@ -1,0 +1,114 @@
+/* Template Styles */
+
+* {
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    
+}
+
+@font-face {
+    font-family: 'Germania';
+    src: url(../fonts/Germania.ttf);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Orelega';
+    src: url(../fonts/Orelega.ttf);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Lobster';
+    src: url(../fonts/Lobster.ttf);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* End Template Styles */
+
+.component {
+    margin: 0 auto;
+    width: clamp(200px, 400px, 600px);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px black;
+    text-align: center;
+    padding: 0px;
+    
+}
+.savior {
+    padding: 30px;
+}
+
+.header { 
+    width: 100%;
+    height: 120px;
+    margin: 0;
+    background: linear-gradient(to left bottom, #ff0000, #ae4500, #6b4600, #3b3708, #20211d); 
+    padding: 0;
+}
+
+.picture {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    margin-top: -75px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 7px solid white;
+    box-shadow: 0px 0px 6px black;
+  }
+
+  .tihonov {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    object-fit: cover;
+  }
+  
+  .name {
+      font-family: 'Germania';
+      margin-top: 0px;
+      margin-bottom: 5px;
+  }
+
+  .about {
+      font-family: 'Orelega';
+      text-align: justify;
+      font-size: 20px;
+  }
+ 
+ .like, .star {
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin: 15px 40px;
+    display: inline-block;
+
+ }
+
+.like, .star, button {
+    font-family: 'Lobster';
+}
+
+button {    
+    width: 100%;
+    background: red;
+    color: white;
+    margin-top: 15px;
+    height: 40px;
+    border-radius: 6px;
+    font-size: 20px;
+    border: none;
+    padding: 6px;
+}

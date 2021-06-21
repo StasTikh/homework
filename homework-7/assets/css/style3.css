@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'Germania';
+    src: url(../fonts/Germania.ttf);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Orelega';
+    src: url(../fonts/Orelega.ttf);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Lobster';
+    src: url(../fonts/Lobster.ttf);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/**************************************************************/
+* {
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+html {
+    font-size: 12px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+/***************************************************************/
+.container {
+    width: clamp(576px, 70vw,1200px);
+    margin: 0 auto;
+   
+ }
+
+header, main, footer {
+   
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.container, header, .all-parts, .main-part {
+    display: flex;
+}
+
+.container {
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-end;
+    width: clamp(576px, 75vw, 1200px);
+}
+main {
+    flex-grow: 1;
+}
+
+header > a{
+    margin: 10px;
+}
+
+header > a:first-child {
+    font-size: 28px;
+    font-weight: bold; 
+    margin-right: auto;  
+}
+
+header {
+    align-items: center;
+}
+footer {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+footer a:first-child {
+    font-size: 18px;
+     
+}
+
+footer a {
+    font-size: 12px;
+
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.arrow {
+   width: auto;
+   align-self: flex-end;
+   margin-left: auto;
+  }
+
+  /**************************************************************/
+
+.all-parts { 
+    flex-wrap: wrap;  
+    border-radius: 15px; 
+    padding: 0;
+}
+
+
+.main-part {
+    justify-content: space-around;
+    width: calc(100% / 3);
+    flex-wrap: wrap;
+    margin-top: 20px;
+    overflow: auto;
+    padding: 10px;
+}
+
+.main-part img {
+    width: 100%;   
+    border: 3px solid white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px black;
+}
+
+.arrow {
+    width: auto;
+    align-self: flex-end;
+    margin: auto;
+    margin-top: 20px;
+    overflow: hidden;
+    padding: 0%;
+    border-radius: 60%;
+   }
+ 
+
+
+   .main-part img:hover {
+    transform: rotate(180deg);
+    /* width: 300px;
+    height: 300px;
+    align-self: center; */
+}

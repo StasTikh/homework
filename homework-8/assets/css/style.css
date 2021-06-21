@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+
+html {
+    font-size: 12px;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+    width: clamp(560px, 85%, 1120px);
+    margin-top: 100px;
+    margin: 100px auto;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 10px;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    position: relative;
+    z-index: 5;
+}
+
+
+
+
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    text-align:justify;
+}
+.iphones-list {
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.i-title {
+    padding-left: 10px;
+    transition: 1.3s;
+}
+
+.iphone-picture img {
+    width: 100px;
+    transition: 2s;
+    margin-top: 15px;
+}
+
+
+.iphone {
+    padding: 10px;
+    display: flex;
+    height: 155px;
+    border: 1px solid black;
+    border-radius: 5px;
+    flex-direction: row;
+    overflow: auto;
+}
+
+.iphone-info {
+    margin-left: 30px;
+    text-align: justify;
+}
+
+.i-title {
+    font-size: 20px;
+}
+
+.i-footer {
+    padding: 10px;
+    display: flex;
+    margin-top: 10px;
+    justify-content:left;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.q-a {
+    margin-right: 20px;
+}
+
+.favorite i {
+    color: red;
+}
+
+.i-descr {
+    padding-left: 10px;
+    width: 90%;
+    font-size: 1.2rem;
+}
+
+
+.i-purchase {
+    
+    display: flex;
+    flex-grow: 1;
+    
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pur-price, .pur-difference {
+    text-align: center;
+    height: 25px;
+    padding: 15px;
+    
+}
+
+
+.iphone > .i-purchase {
+    width: 45rem;
+}
+
+.pur-price {
+    font-size: large;
+    color: orange;
+}
+
+.click, .favorite {
+    opacity: 0;
+    transition: 1s;
+}
+
+
+.cart, .click {
+    height: 45px;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 2px;
+}
+
+.iphone:hover  .click, .iphone:hover .favorite {
+    opacity: 1;
+}
+
+.iphone:hover img {
+    transform: scale(1.4);
+}
+
+.iphone:hover .i-title {
+    color: red;
+    font-size: 22px;
+}
+
+
+.cart {
+    background: orange;
+    color: white;
+    border: none;
+    font-size: 1.3rem;
+}
+
+.click {
+    background: green;
+    color: white;
+    border: none;
+    font-size: 1.3rem;
+}
