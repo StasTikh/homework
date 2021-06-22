@@ -17,6 +17,20 @@ function closeGame() {
     location.reload();    
 }
 
+function openGame2() {
+    let tag2 = document.getElementById('dialog2');
+    dialogPolyfill.registerDialog(tag2);
+    tag2.showModal();
+}
+
+function closeGame2() {
+    let tag = document.getElementById('dialog2');
+    tag.close();
+    document.getElementById('outAnswer').style.display = "none";
+    guessCount = 0;
+    location.reload(); 
+}
+
 function guessGame(){ 
     let guessNum = document.getElementById('myNum').value;
     let answerOut = document.getElementById('outAnswer');
@@ -24,7 +38,6 @@ function guessGame(){
     document.getElementById('outAnswer').style.display = "block";
    
     if (guessNum == randomNumber) {
-
         if(guessCount == 0) {
             answerOut.innerHTML = `Correct! </br> You win, number is ${guessNum}! </br> It's was ${guessCount + 1}st try.`;
             document.getElementById('myNum').value = '';
@@ -114,8 +127,77 @@ function isNumber() {
     }
 
 }
+function isNumber2() {
+    let answer = +userBet.value;
+    let answer2 = +userOption.value
+     if(Number.isNaN(answer) || Number.isNaN(answer2)){
+        noNum3.style.display = "inline";
+        noNum3.innerHTML = "*Please enter only numbers!"
+        gameButton.style.display = "none";
+    } else {
+        noNum3.style.display = "none";
+        gameButton.style.display = "block";
+    }
+
+}
 
 function newGame() {
     location.reload();
     
+}
+
+function generate() {
+    let randNumber = Math.floor((Math.random() * 6) + 1);
+    
+    return randNumber;
+}
+    
+var buttonGame = document.getElementById('gameButton');
+var balance = 10000;
+var balanceField = document.getElementById('userBalance');
+    
+function playGame() {
+    let bet = +userBet.value;
+    let option = +userOption.value;
+    
+    if(bet > balance) {
+        messagePlace.innerHTML = "Insufficent funds! Top up your balance!"
+        return;
+    }    
+
+    let dice1 = generate();
+    let dice2 = generate();
+    
+    dice1Image.src = `./assets/images/${dice1}.png`
+    dice2Image.src = `./assets/images/${dice2}.png`
+    
+    if ((dice1 + dice2) == option) {
+        if (dice1 == dice2) {
+            balance = balance + (bet * 2);
+            userBalance.innerHTML = balance;
+            messagePlace.innerHTML = `It's: ${dice1 + dice2}! You win! Double bet: ${(bet + bet) * 2} UAH`;
+            messagePlace.classList.remove("text-danger");
+            messagePlace.classList.add("text-success");
+            userBet.value = '';
+            userOption.value = '';
+            userBet.focus();
+        } else {
+            balance = balance + bet;
+            userBalance.innerHTML = balance;
+            messagePlace.innerHTML = `It's: ${dice1 + dice2}! You win! your prize: ${bet + bet} UAH`;
+            messagePlace.classList.remove("text-danger");
+            messagePlace.classList.add("text-success");
+            userBet.value = '';
+            userOption.value = '';
+            userBet.focus();
+        }
+    } else {
+        balance = balance - bet;
+        userBalance.innerHTML = balance;
+        messagePlace.innerHTML = `It's: ${dice1 + dice2}! You lose!`;
+        messagePlace.classList.add("text-danger");
+        userBet.value = '';
+        userOption.value = '';
+        userBet.focus();
+    }
 }

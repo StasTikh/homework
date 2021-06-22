@@ -1,14 +1,46 @@
-button {
-    margin-left: 27%;
+* {
+    box-sizing: border-box;
 }
 
-#noNum, #reloadButton {
+.col2 {
     display: none;
 }
 
-dialog {
-    width: 50%;
-    height: 50%;    
+.second-good-luck {
+    margin-bottom: 1.2em !important;
+}
+
+.second-good-luck-ru {
+    margin-bottom: 1.25em !important;
+}
+
+
+.dices > img{
+    height: 90px;
+    object-fit: cover;
+    object-position: center;
+} 
+
+#messagePlase {
+    height: 50px;
+}
+
+#myNum,  {
+    margin: 0 auto;
+}
+
+small, #reloadButton {
+    display: none;
+}
+
+#dialog1 {
+    width: 610px;
+    height: 440px;    
+}
+
+#dialog2 {
+    width: 75vw;
+    height: 85vh;
 }
 
 .card-text {
@@ -17,8 +49,24 @@ dialog {
 
 @media (max-width: 768px) {
 
-    dialog {
+    .col2 {
+        display: inline;
+    }
+
+    #dialog1 {
         width: 85%;
         height: 60%;
+    }
+    #dialog2 {
+        width: 90%;
+        height: 90%;
+    }
+
+    .inputs {
+        flex-direction: column !important;
+    }
+
+    #messagePlace {
+        font-size: small;
     }
 }

@@ -10,7 +10,130 @@
   <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
 	<link rel="stylesheet" href="./assets/style/style.css">
 	<script src="./assets/js/app.js"></script>
-  <!-- <script src="./assets/dialog-polyfill-master/dist/dialog-polyfill.esm.js"></script> -->
+  <script src="./assets/dialog-polyfill-master/dist/dialog-polyfill.js"></script>
+  </head>
+
+  <body>
+   <div class="container position-relarive mt-4 text-center">
+   
+    <div class="row row-cols-1 row-cols-md-4 g-1 m-auto">
+      <div class="col">
+        <div class="d-flex flex-align-center">
+          <a href="./russian.html" type="button" class="btn btn-outline-danger mt-3 w-50 m-auto">RU</a>
+        </div>
+      </div>
+      
+      <div class="col">
+        <div class="card shadow p-3 mb-5 bg-body rounded">
+          <img src="https://privet-alice.ru/wp-content/uploads/2018/07/24e6ae1f2de672a51791fd2544250854_0x0w.png" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title"><i class="fas fa-puzzle-piece"></i>
+              Guess Game</h5>
+              <p class="card-text">I've choosed a random number between 1 and 100. Try to guess it maximum in 10 turns. I'll tell you if your guess was too high or too low. Try yourself!</p>
+            <span class="text-center mb-3">Good Luck!</span>
+            <a id="openG" onclick="openGame()" class="btn btn-primary">Let's Go!</a>
+              
+          </div>
+        </div>
+      </div>
+     
+      <div class="col">
+        <div class="card shadow p-3 mb-5 bg-body rounded">
+          <img src="/assets/images/dice.jpg" class="card-img-top" alt="...">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title"><i class="fas fa-dice"></i>
+              Dice Game</h5>
+            <p class="card-text mb-3">You have a balance and two dices. Enter your bet and choose a number. If you win, you'll get back your bet. If wou wrong, your bet sum will be taken.</p>
+            <span class="second-good-luck text-center mb-3">Good Luck!</span>
+            <a id="openG" onclick="openGame2()" class="btn btn-primary">Roll the Dice!</a>
+          </div>
+        </div>
+      </div>
+      <div class="col col2">
+        <div class="d-flex flex-align-center">
+          <a href="./russian.html" type="button" class="btn btn-outline-danger mt-3 w-50 m-auto">RU</a>
+        </div>
+      </div>
+    </div>
+   
+   <dialog id="dialog1"> 
+        <div class="container"> 
+            <div class="text-end mb-3">
+				<i onclick="closeGame()" class="far fa-window-close fa-2x"></i>
+			</div>
+            <h1 class="mb-4 text-center mt-3">
+                <i class="fas fa-dice"></i>
+                    Guess Game
+            </h1> 
+        <div class="form-group text-center mb-3">
+          <form id="submitForm" onsubmit="guessGame(); return false"> 
+            <input type="text" class="form-control text-center mb-1" id="myNum" placeholder="From 1 to 100"  oninput="isNumber()">
+            <small id="noNum" class="text-danger mt-1 mb-4"></small>
+          </form> 
+        </div>
+        <button id="numButton" class="text-center btn btn-primary w-100" onclick="guessGame()">GO!</button>
+        <p class="text-center mt-3" id="outAnswer"></p>
+        <button id="reloadButton" class="text-center btn btn-danger w-100" onclick="newGame()">Restart</button>
+        </div>
+    </dialog>
+    
+
+  <dialog id="dialog2" class="p-3">
+      <div class="container">         
+        <div class="text-end mb-1">
+          <i onclick="closeGame2()" class="far fa-window-close fa-2x"></i>
+        </div>
+        <h1 class='my-1'>
+            <i class="fas fa-dice"></i>
+            <span>Personal Casino</span>
+        </h1>
+        <div class="dices d-flex justify-content-center m-3">
+            <img id='dice1Image' class='border shadow m-3' src='./assets/images/3.png'>
+            <img id='dice2Image' class='border shadow m-3' src='./assets/images/6.png'>
+        </div>
+        <h4 id="messagePlace" class='alert alert-light text-danger border border-warning'></h4>
+        <h3 class='my-2'>
+            Your balance: 
+            <output  id='userBalance'>10000</output> UAH.
+        </h3>
+        <div class="row my-3 g-1 fs-4 inputs">
+            <div class="col d-flex align-items-center">
+              <span>Bet:</span>  
+              <input oninput="isNumber2()" type="text" class='flex-grow-1 mx-1 w-100' id="userBet" placeholder="For example: 500"> 
+              <span> UAH.</span>
+          </div>
+          <form  onsubmit="playGame(); return false">
+            <div class="col d-flex align-items-center">
+                Sum: 
+                <input oninput="isNumber2()" type="text" class='flex-grow-1 ms-2 w-100'id="userOption" placeholder="For example: 7">
+            </div>
+          </form>
+      </div>
+      <small id="noNum3" class="text-danger mt-1 mb-4"></small>
+      <button onclick="playGame()" class='btn btn-lg btn-primary my-1 w-100 p-2 m-auto' id='gameButton'>
+          <i style='transform:rotate(20deg);' class="fas fa-dice-five"></i>
+          Play!
+      </button>
+
+  </div>  
+  </dialog>
+  </body>
+</html>
+
+<!-- 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<title>Homework #23</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<link rel="stylesheet" href="./assets/dialog-polyfill-master/dist/dialog-polyfill.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/style/style.css">
+	<script src="./assets/js/app.js"></script>
+  <!-- <script src="./assets/dialog-polyfill-master/dist/dialog-polyfill.esm.js"></script> 
   <script src="./assets/dialog-polyfill-master/dist/dialog-polyfill.js"></script>
   </head>
 
@@ -38,7 +161,7 @@
                     Guess Game
             </h1>
     
-        <div class="form-group text-center mb-3">
+        <divclass="form-group text-center mb-3">
           <form id="submitForm" onsubmit="guessGame(); return false"> 
             <input type="text" class="form-control text-center mb-1" id="myNum" placeholder="From 1 to 100"  oninput="isNumber()">
             <small id="noNum" class="text-danger mb-1"></small>
@@ -51,4 +174,5 @@
 
     </dialog>
   </body>
-</html>
+</html> 
+ -->
