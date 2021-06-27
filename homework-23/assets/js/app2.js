@@ -57,14 +57,6 @@ function guessGame(){
             answerOut.style.display = "none";
             guessCount = guessCount;
             myNum.focus();
-        } else if (guessNum == 0) {
-            document.getElementById('numButton').style.display = "none";
-            document.getElementById('myNum').value = '';
-            noNum.style.display = "block";
-            noNum.innerHTML = "*От 1!";
-            answerOut.style.display = "none";
-            guessCount = guessCount; 
-            myNum.focus();
         } else {
             answerOut.innerHTML = `Ты не угадал! </br> Мой номер больше. </br> Это попытка номер: ${guessCount + 1}`;
             answerOut.classList.add("text-warning");
@@ -101,6 +93,10 @@ function isNumber() {
     } else if(answer > 100) {
         document.getElementById('noNum').style.display = "inline";
         noNum.innerHTML = "*Я же написал - до 100!"
+        document.getElementById('numButton').style.display = "none";
+    } else if(answer == 0) {
+        document.getElementById('noNum').style.display = "inline";
+        noNum.innerHTML = "*От 1!";
         document.getElementById('numButton').style.display = "none";
     } else {
         document.getElementById('noNum').style.display = "none";
@@ -139,6 +135,8 @@ var buttonGame = document.getElementById('gameButton');
 var balance = 10000;
 var balanceField = document.getElementById('userBalance');
     
+
+
 function playGame() {
     let bet = +userBet.value;
     let option = +userOption.value;
@@ -146,7 +144,11 @@ function playGame() {
     if(bet > balance) {
         messagePlace.innerHTML = "Недостаточно средств! Пополните баланс!"
         return;
-    }    
+    }
+    
+    if (userBet.value == ""){
+        messagePlace.innerHTML = "Нужно сделать ставку!"
+    }
 
     let dice1 = generate();
     let dice2 = generate();
@@ -183,7 +185,8 @@ function playGame() {
         userOption.value = '';
         userBet.focus();
     }
-}
+}   
+
 
 
 // function randomPic() {

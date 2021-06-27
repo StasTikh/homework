@@ -79,13 +79,6 @@ function guessGame(){
             noNum.innerHTML = "Enter some number, please!";
             answerOut.style.display = "none";
             guessCount = guessCount;
-        } else if (guessNum == 0) {
-            document.getElementById('numButton').style.display = "none";
-            document.getElementById('myNum').value = '';
-            noNum.style.display = "block";
-            noNum.innerHTML = "From 1!";
-            answerOut.style.display = "none";
-            guessCount = guessCount; 
         } else {
             answerOut.innerHTML = `You wrong! </br> Number is bigger. </br> It's try number ${guessCount + 1}`;
             answerOut.classList.add("text-warning");
@@ -121,6 +114,13 @@ function isNumber() {
         document.getElementById('noNum').style.display = "inline";
         noNum.innerHTML = "*I said, number from 1 to 100!"
         document.getElementById('numButton').style.display = "none";
+    } else if (answer == 0) {
+        document.getElementById('numButton').style.display = "none";
+        document.getElementById('myNum').value = '';
+        noNum.style.display = "block";
+        noNum.innerHTML = "From 1!";
+        answerOut.style.display = "none";
+        guessCount = guessCount; 
     } else {
         document.getElementById('noNum').style.display = "none";
         document.getElementById('numButton').style.display = "block";
