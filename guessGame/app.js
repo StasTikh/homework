@@ -38,7 +38,7 @@
         big.style.display = "none";
         this.style.display = "none";
         restart.style.display = "block";    
-        document.getElementById("winField").innerHTML = `Победа! угадал за ${numGuess +1} попыток!`;   
+        document.getElementById("winField").innerHTML = `Победа! Я угадал с ${numGuess +1} раза!`;   
       });
 
     restart.addEventListener("click", function(){
