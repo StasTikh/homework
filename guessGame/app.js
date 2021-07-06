@@ -59,8 +59,7 @@
           big.style.display = "none";
           win.style.display = "none";
           restart.style.display = "block";
-          answerF.innerHTML = `А куда уж больше 100?`;
-          document.getElementById("winField").innerHTML = `Правила для кого написаны?`;
+          document.getElementById("winField").innerHTML = `О! Ты правда загадал 100? Это редкость`;
         }  
       });
 
