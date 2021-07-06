@@ -26,5 +26,6 @@ function startCount() {
     }
     answerF.style.display = "inline";
     answerField.innerHTML = `Сумма чисел от ${startC} до ${endC} равна: ${sum}`;
+    console.log(startC, endC);
 
 }
