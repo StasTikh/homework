@@ -9,7 +9,7 @@ function isNumber() {
         alert1.innerHTML = "Ввод только чисел"    
     } else if (Number.isNaN(answer2)) {
         alert2.style.display = "inline";
-        alert2.innerHTML = "Ввод только чисел"
+        alert2.innerHTML = "Ввод только чисел";
     } else {
         alert1.style.display = "none";
         alert2.style.display = "none";
