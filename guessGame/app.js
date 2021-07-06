@@ -28,6 +28,7 @@
         high = Number(answerF.innerHTML);
         answerF.innerHTML = search();
         numGuess++;
+        console.log (low, high);
         if (numGuess == 10) {
           small.style.display = "none";
           big.style.display = "none";
@@ -41,13 +42,20 @@
           restart.style.display = "block";
           answerF.innerHTML = `Нельзя меньше 1!`;
           document.getElementById("winField").innerHTML = `Правила для кого написаны?`;
-        }  
+        }   else if(low == high) {
+          small.style.display = "none";
+          big.style.display = "none";
+          win.style.display = "none";
+          restart.style.display = "block";
+          document.getElementById("winField").innerHTML = `Ты уверен, что все делаешь верно?`;
+        }
       });
       
       big.addEventListener('click', function(){
         low = Number(answerF.innerHTML);    
         answerF.innerHTML = search();
         numGuess++;
+        console.log (low, high);
         if (numGuess == 10) {
           small.style.display = "none";
           big.style.display = "none";
@@ -60,6 +68,12 @@
           win.style.display = "none";
           restart.style.display = "block";
           document.getElementById("winField").innerHTML = `О! Ты правда загадал 100? Это редкость`;
+        } else if(low == high) {
+          small.style.display = "none";
+          big.style.display = "none";
+          win.style.display = "none";
+          restart.style.display = "block";
+          document.getElementById("winField").innerHTML = `Ты уверен, что все делаешь верно?`;
         }  
       });
 
