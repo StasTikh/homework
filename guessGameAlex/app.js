@@ -100,13 +100,13 @@ function guessAlex(){
       restart.style.display = "block";
       winField.style.display = "block";
       winField.innerHTML = `Попытки закончились, я проиграл!`;    
-    } else if( search() == 100) {
+    } else if( search() == (high-1)) {
       small.style.display = "none";
       big.style.display = "none";
       win.style.display = "none";
       restart.style.display = "block";
       winField.style.display = "block";
-      winField.innerHTML = `О! Ты правда загадал 100? Это редкость`;
+      winField.innerHTML = `О! Ты правда загадал ${high}? Забавно`;
     } else if(low == high) {
       small.style.display = "none";
       big.style.display = "none";
