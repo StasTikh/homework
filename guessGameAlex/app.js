@@ -14,24 +14,44 @@ function guessAlex(){
   
   if (high >= 200 && high <= 399 ){
     maxNumGuess = 11;
+    moreTry.style.display = "block";
+    moreTry.innerHTML = `Из-за высокого конечного числа колличество попыток увеличено до ${maxNumGuess}!`
   } else if (high >= 400 && high <= 599) {
     maxNumGuess = 12;
+    moreTry.style.display = "block";
+    moreTry.innerHTML = `Из-за высокого конечного числа колличество попыток увеличено до ${maxNumGuess}!`
   } else if (high >= 600 && high <= 799) {
     maxNumGuess = 13;
+    moreTry.style.display = "block";
+    moreTry.innerHTML = `Из-за высокого конечного числа колличество попыток увеличено до ${maxNumGuess}!`
   } else if (high >= 800 && high <= 999) {
     maxNumGuess = 14;
+    moreTry.style.display = "block";
+    moreTry.innerHTML = `Из-за высокого конечного числа колличество попыток увеличено до ${maxNumGuess}!`
   } else if (high >= 1000 && high <= 2999) {
     maxNumGuess = 15;
+    moreTry.style.display = "block";
+    moreTry.innerHTML = `Из-за высокого конечного числа колличество попыток увеличено до ${maxNumGuess}!`
   } else if (high >= 3000 && high <= 4999) {
     maxNumGuess = 16;
+    moreTry.style.display = "block";
+    moreTry.innerHTML = `Из-за высокого конечного числа колличество попыток увеличено до ${maxNumGuess}!`
   } else if (high >= 5000 && high <= 6999) {
     maxNumGuess = 17;
+    moreTry.style.display = "block";
+    moreTry.innerHTML = `Из-за высокого конечного числа колличество попыток увеличено до ${maxNumGuess}!`
   } else if (high >= 7000 && high <= 8999) {
     maxNumGuess = 18;
+    moreTry.style.display = "block";
+    moreTry.innerHTML = `Из-за высокого конечного числа колличество попыток увеличено до ${maxNumGuess}!`
   } else if (high >= 9000 && high <= 9999) {
     maxNumGuess = 19;
+    moreTry.style.display = "block";
+    moreTry.innerHTML = `Из-за высокого конечного числа колличество попыток увеличено до ${maxNumGuess}!`
   } else if (high >= 10000) {
     maxNumGuess = 22;
+    moreTry.style.display = "block";
+    moreTry.innerHTML = `Из-за высокого конечного числа колличество попыток увеличено до ${maxNumGuess}!`
   } 
 
   console.log(maxNumGuess);
