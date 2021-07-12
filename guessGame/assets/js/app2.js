@@ -34,7 +34,8 @@ function game(){
           big.style.display = "none";
           win.style.display = "none";
           restart.style.display = "block";
-          document.getElementById("winField2").innerHTML = `Попытки закончились, я проиграл!`;    
+          document.getElementById("winField2").innerHTML = `Попытки закончились, я проиграл!`;
+          soundLose();    
         } else if( search() == 0) {
           small.style.display = "none";
           big.style.display = "none";
@@ -42,12 +43,14 @@ function game(){
           restart.style.display = "block";
           answerF.innerHTML = `Нельзя меньше 1!`;
           document.getElementById("winField2").innerHTML = `Правила для кого написаны?`;
+          soundLose();
         }   else if(low == high) {
           small.style.display = "none";
           big.style.display = "none";
           win.style.display = "none";
           restart.style.display = "block";
           document.getElementById("winField2").innerHTML = `Ты уверен, что все делаешь верно?`;
+          soundLose();
         }
       });
       
@@ -61,19 +64,22 @@ function game(){
           big.style.display = "none";
           win.style.display = "none";
           restart.style.display = "block";
-          document.getElementById("winField2").innerHTML = `Попытки закончились, я проиграл!`;    
+          document.getElementById("winField2").innerHTML = `Попытки закончились, я проиграл!`;  
+          soundLose();  
         } else if( search() == 100) {
           small.style.display = "none";
           big.style.display = "none";
           win.style.display = "none";
           restart.style.display = "block";
           document.getElementById("winField2").innerHTML = `О! Ты правда загадал 100? Это редкость`;
+          soundWin();
         } else if(low == high || (high - low) == 1) {
           small.style.display = "none";
           big.style.display = "none";
           win.style.display = "none";
           restart.style.display = "block";
           document.getElementById("winField2").innerHTML = `Ты уверен, что все делаешь верно?`;
+          soundLose();
         }  
       });
 
@@ -88,7 +94,7 @@ function game(){
       });
 
     restart.addEventListener("click", function(){
-        location.reload();   
+        closeGame2();   
       });
      
   }

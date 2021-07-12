@@ -11,47 +11,57 @@ function guessAlex(){
   let high = +document.getElementById("endNum").value;
   console.log(high);
   let maxNumGuess = 10;
+  let alert1 = document.getElementById('noNum');
+
+  if (high == "") {
+    alert1.style.display = "block";
+    document.getElementById("bodyCard").style.display = "none";
+    answerF.innerHTML = "Нужно было ввести цифру! Выходим";
+    var delay = setInterval(function(){
+      location.reload();
+    },1000);
+  }
   
   if (high >= 200 && high <= 399 ){
     maxNumGuess = 11;
     moreTry.style.display = "block";
-    moreTry.innerHTML = `Из-за высокого конечного числа, колличество попыток увеличено до ${maxNumGuess}!`
+    moreTry.innerHTML = `Из-за высокого конечного числа, количество попыток увеличено до ${maxNumGuess}!`
   } else if (high >= 400 && high <= 599) {
     maxNumGuess = 12;
     moreTry.style.display = "block";
-    moreTry.innerHTML = `Из-за высокого конечного числа, колличество попыток увеличено до ${maxNumGuess}!`
+    moreTry.innerHTML = `Из-за высокого конечного числа, количество попыток увеличено до ${maxNumGuess}!`
   } else if (high >= 600 && high <= 799) {
     maxNumGuess = 13;
     moreTry.style.display = "block";
-    moreTry.innerHTML = `Из-за высокого конечного числа, колличество попыток увеличено до ${maxNumGuess}!`
+    moreTry.innerHTML = `Из-за высокого конечного числа, количество попыток увеличено до ${maxNumGuess}!`
   } else if (high >= 800 && high <= 999) {
     maxNumGuess = 14;
     moreTry.style.display = "block";
-    moreTry.innerHTML = `Из-за высокого конечного числа, колличество попыток увеличено до ${maxNumGuess}!`
+    moreTry.innerHTML = `Из-за высокого конечного числа, количество попыток увеличено до ${maxNumGuess}!`
   } else if (high >= 1000 && high <= 2999) {
     maxNumGuess = 15;
     moreTry.style.display = "block";
-    moreTry.innerHTML = `Из-за высокого конечного числа, колличество попыток увеличено до ${maxNumGuess}!`
+    moreTry.innerHTML = `Из-за высокого конечного числа, количество попыток увеличено до ${maxNumGuess}!`
   } else if (high >= 3000 && high <= 4999) {
     maxNumGuess = 16;
     moreTry.style.display = "block";
-    moreTry.innerHTML = `Из-за высокого конечного числа, колличество попыток увеличено до ${maxNumGuess}!`
+    moreTry.innerHTML = `Из-за высокого конечного числа, количество попыток увеличено до ${maxNumGuess}!`
   } else if (high >= 5000 && high <= 6999) {
     maxNumGuess = 17;
     moreTry.style.display = "block";
-    moreTry.innerHTML = `Из-за высокого конечного числа, колличество попыток увеличено до ${maxNumGuess}!`
+    moreTry.innerHTML = `Из-за высокого конечного числа, количество попыток увеличено до ${maxNumGuess}!`
   } else if (high >= 7000 && high <= 8999) {
     maxNumGuess = 18;
     moreTry.style.display = "block";
-    moreTry.innerHTML = `Из-за высокого конечного числа, колличество попыток увеличено до ${maxNumGuess}!`
+    moreTry.innerHTML = `Из-за высокого конечного числа, количество попыток увеличено до ${maxNumGuess}!`
   } else if (high >= 9000 && high <= 9999) {
     maxNumGuess = 19;
     moreTry.style.display = "block";
-    moreTry.innerHTML = `Из-за высокого конечного числа, колличество попыток увеличено до ${maxNumGuess}!`
+    moreTry.innerHTML = `Из-за высокого конечного числа, количество попыток увеличено до ${maxNumGuess}!`
   } else if (high >= 10000) {
     maxNumGuess = 22;
     moreTry.style.display = "block";
-    moreTry.innerHTML = `Из-за высокого конечного числа, колличество попыток увеличено до ${maxNumGuess}!`
+    moreTry.innerHTML = `Из-за высокого конечного числа, количество попыток увеличено до ${maxNumGuess}!`
   } 
 
   console.log(maxNumGuess);
@@ -87,7 +97,8 @@ function guessAlex(){
       win.style.display = "none";
       restart.style.display = "block";
       winField.style.display = "block";
-      winField.innerHTML = `Попытки закончились, я проиграл!`;    
+      winField.innerHTML = `Попытки закончились, я проиграл!`;
+      soundLose();    
     } else if( search() == 0) {
       small.style.display = "none";
       big.style.display = "none";
@@ -96,6 +107,7 @@ function guessAlex(){
       answerF.innerHTML = `Нельзя меньше 1!`;
       winField.style.display = "block";
       winField.innerHTML = `Правила для кого написаны?`;
+      soundLose();
     } else if(low == high) {
       small.style.display = "none";
       big.style.display = "none";
@@ -103,6 +115,7 @@ function guessAlex(){
       restart.style.display = "block";
       winField.style.display = "block";
       winField.innerHTML = `Ты уверен, что все делаешь верно?`;
+      soundLose();
     }
     
   });
@@ -119,7 +132,8 @@ function guessAlex(){
       win.style.display = "none";
       restart.style.display = "block";
       winField.style.display = "block";
-      winField.innerHTML = `Попытки закончились, я проиграл!`;    
+      winField.innerHTML = `Попытки закончились, я проиграл!`;
+      soundLose(); 
     } else if( search() == (high-1)) {
       small.style.display = "none";
       big.style.display = "none";
@@ -127,6 +141,7 @@ function guessAlex(){
       restart.style.display = "block";
       winField.style.display = "block";
       winField.innerHTML = `О! Ты правда загадал ${high}? Забавно`;
+      soundWin();
     } else if(low == high) {
       small.style.display = "none";
       big.style.display = "none";
@@ -134,6 +149,7 @@ function guessAlex(){
       restart.style.display = "block";
       winField.style.display = "block";
       winField.innerHTML = `Ты уверен, что все делаешь верно?`;
+      soundLose();
     }
     
   });
@@ -148,7 +164,7 @@ function guessAlex(){
   });
 
   restart.addEventListener("click", function(){
-    location.reload();   
+    closeGame2();
   });
      
 }
@@ -190,4 +206,17 @@ function closeGame2() {
   let tag = document.getElementById('dialog2');
   tag.close();
   location.reload(); 
+}
+
+
+function soundWin() {
+  var audio = new Audio(); // Создаём новый элемент Audio
+  audio.src = './assets/audio/win.mp3'; // Указываем путь к звуку "клика"
+  audio.autoplay = true; // Автоматически запускаем
+}
+
+function soundLose() {
+  var audio = new Audio(); // Создаём новый элемент Audio
+  audio.src = './assets/audio/lose.mp3'; // Указываем путь к звуку "клика"
+  audio.autoplay = true; // Автоматически запускаем
 }
