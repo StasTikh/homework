@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/IsNumber.js"></script>
+    <title>Document</title>
+</head>
+<body onload="taxCalc()">
+    <div class="container text-center d-flex flex-column border border-2 w-50 mt-3 shadow p-3 mb-5 bg-white rounded">
+        <h1 class="mt-4 text-success">Income Tax Rates</h1>
+
+        <input type="number" oninput="isNumber()" class="mt-2 w-50 mx-auto" id="salary" placeholder="Enter your year salary in USD">
+        
+        <button type="button" onclick="taxCalc()" class="btn btn-warning w-50 mt-2 mx-auto">Calculate</button>
+
+        <div class="alert alert-primary w-50 mx-auto mt-3" id="rateField" role="alert">
+            Here you will see your tax sum
+        </div>
+        
+        <div class="alert alert-success w-50 mb-5 mx-auto" id="finalRateField" role="alert">
+            Here you will see your final salary
+          </div>
+
+    </div>
+</body>
+
+</html>
