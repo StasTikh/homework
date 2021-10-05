@@ -37,23 +37,23 @@ function taxCalc(){
      if(approximat > 0 && approximat <= 9951){
         rate1 = approximat * firstGroupTax;
         totalIncome = income - rate1;
-        rateField.innerHTML = `Your rate is: ${rate1.toFixed(3)}`;
-        finalRateField.innerHTML = `Your clear income is: ${totalIncome.toFixed(3)}`;
+        rateField.innerHTML = `Your rate is: ${rate1.toFixed(2)}`;
+        finalRateField.innerHTML = `Your clear income is: ${totalIncome.toFixed(2)}`;
      } else if(approximat > 9951 && approximat <= 40525) {
         rate1 =  9950 * firstGroupTax; //995
         rate2 = (approximat - 9951) * secondGroupTax;
         totalRate = rate1+rate2;
         totalIncome = income - totalRate;
-        rateField.innerHTML = `Your rate is: ${totalRate.toFixed(3)}`;
-        finalRateField.innerHTML = `Your clear income is: ${totalIncome.toFixed(3)}`;
+        rateField.innerHTML = `Your rate is: ${totalRate.toFixed(2)}`;
+        finalRateField.innerHTML = `Your clear income is: ${totalIncome.toFixed(2)}`;
      } else if(approximat >= 40526 && approximat <= 86375) {
         rate1 =  9950 * firstGroupTax; //995
         rate2 = 30574 * secondGroupTax; //3669
         rate3 = ((approximat - 9951) - 30574) * thirdGroupTax;
         totalRate = rate1+rate2+rate3;
         totalIncome = income - totalRate;
-        rateField.innerHTML = `Your rate is: ${totalRate.toFixed(3)}`;
-        finalRateField.innerHTML = `Your clear income is: ${totalIncome.toFixed(3)}`;
+        rateField.innerHTML = `Your rate is: ${totalRate.toFixed(2)}`;
+        finalRateField.innerHTML = `Your clear income is: ${totalIncome.toFixed(2)}`;
      }  else if(approximat >= 86376 && approximat <= 164925){
         rate1 =  9950 * firstGroupTax; //995
         rate2 = 30574 * secondGroupTax; //3669
@@ -61,8 +61,8 @@ function taxCalc(){
         rate4 = (approximat - 9951 - 30574 - 45849) * fourthGroupTax;
         totalRate = rate1+rate2+rate3+rate4;
         totalIncome = income - totalRate;       
-        rateField.innerHTML = `Your rate is: ${totalRate.toFixed(3)}`;
-        finalRateField.innerHTML = `Your clear income is: ${totalIncome.toFixed(3)}`;
+        rateField.innerHTML = `Your rate is: ${totalRate.toFixed(2)}`;
+        finalRateField.innerHTML = `Your clear income is: ${totalIncome.toFixed(2)}`;
      } else if(approximat >= 164926 && approximat <= 209425){
         rate1 =  9950 * firstGroupTax; //995
         rate2 = 30574 * secondGroupTax; //3669
@@ -71,8 +71,8 @@ function taxCalc(){
         rate5 = (approximat - 9951 - 30574 - 45849 - 78549) * fifthGroupTax;
         totalRate = rate1+rate2+rate3+rate4+rate5;
         totalIncome = income - totalRate;
-        rateField.innerHTML = `Your rate is: ${totalRate.toFixed(3)}`;
-        finalRateField.innerHTML = `Your clear income is: ${totalIncome.toFixed(3)}`;
+        rateField.innerHTML = `Your rate is: ${totalRate.toFixed(2)}`;
+        finalRateField.innerHTML = `Your clear income is: ${totalIncome.toFixed(2)}`;
      }  else if(approximat >= 209426 && approximat <= 523600){
         rate1 =  9950 * firstGroupTax; //995
         rate2 = 30574 * secondGroupTax; //3669
@@ -82,8 +82,8 @@ function taxCalc(){
         rate6 = (approximat - 9951 - 30574 - 45849 - 78549 - 44499) * sixthGroupTax;
         totalRate = rate1+rate2+rate3+rate4+rate5+rate6;
         totalIncome = income - totalRate;
-        rateField.innerHTML = `Your rate is: ${totalRate.toFixed(3)}`;
-        finalRateField.innerHTML = `Your clear income is: ${totalIncome.toFixed(3)}`;     
+        rateField.innerHTML = `Your rate is: ${totalRate.toFixed(2)}`;
+        finalRateField.innerHTML = `Your clear income is: ${totalIncome.toFixed(2)}`;     
      }  else if(approximat >= 523601){
         rate1 =  9950 * firstGroupTax; //995
         rate2 = 30574 * secondGroupTax; //3669
@@ -94,8 +94,8 @@ function taxCalc(){
         rate7 = (approximat - 9951 - 30574 - 45849 - 78549 - 44499 - 314174) * seventhGroupTax;
         totalRate = rate1+rate2+rate3+rate4+rate5+rate6+rate7;
         totalIncome = income - totalRate;
-        rateField.innerHTML = `Your rate is: ${totalRate.toFixed(3)}`;
-        finalRateField.innerHTML = `Your clear income is: ${totalIncome.toFixed(3)}`;
+        rateField.innerHTML = `Your rate is: ${totalRate.toFixed(2)}`;
+        finalRateField.innerHTML = `Your clear income is: ${totalIncome.toFixed(2)}`;
         
      } 
   }
