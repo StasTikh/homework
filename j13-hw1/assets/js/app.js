@@ -91,9 +91,9 @@ function taxCalc(){
         rate4 = 78549 * fourthGroupTax; //18851
         rate5 = 44499 * fifthGroupTax; //14239
         rate6 = 314174 * sixthGroupTax; 
+        rate7 = (approximat - 9951 - 30574 - 45849 - 78549 - 44499 - 314174) * seventhGroupTax;
         totalRate = rate1+rate2+rate3+rate4+rate5+rate6+rate7;
         totalIncome = income - totalRate;
-        rate7 = (approximat - 9951 - 30574 - 45849 - 78549 - 44499 - 314174) * seventhGroupTax;
         rateField.innerHTML = `Your rate is: ${totalRate.toFixed(2)}`;
         finalRateField.innerHTML = `Your clear income is: ${totalIncome.toFixed(2)}`;
         
