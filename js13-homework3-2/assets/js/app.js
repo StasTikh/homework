@@ -2,15 +2,13 @@ function to2(num) {
     return Math.floor(num*100) / 100;
 }
 
-function monthCreator(day, body, bodyPayment, percentPayment, monthlyPayment){
+function monthCreator(month, body, bodyPayment, percentPayment, monthlyPayment){
     
-    this.day = day;
+    this.month = month;
     this.body = body;
     this.bodyPayment = bodyPayment;
     this.percentPayment = percentPayment;
     this.monthlyPayment = monthlyPayment;
-    
-
     
 }
 
@@ -24,6 +22,8 @@ function annuityCalc() {
     console.log(amount, overPay, amount+overPay);
     var m = 0;
     
+let arr = [];
+
     for (m = 1; m<=term; m++){
         if(m == term) {
             monthPay = amount;
@@ -34,14 +34,18 @@ function annuityCalc() {
         console.log(`Body: ${amount}, Body payment: ${bodyPart}, Rate payment: ${percentPay}, Monthly payment: ${monthPay}`);
 
         
+        
         var allPay = new monthCreator(m, amount, bodyPart, percentPay, monthPay);
-        
-        //console.log(Object.values(allPay));
-
-        
-          
+        arr.push(allPay);          
     }
-    //console.log(allPay);
-    console.log(Object.values(allPay));
-
+    
+    paymentTable.innerHTML += arr.map(item => `
+                                <tr><td>${item.month}</td>
+                                <td>${item.body}</td>
+                                <td>${item.bodyPayment}</td>
+                                <td>${item.percentPayment}</td>
+                                <td>${item.monthlyPayment}</td></tr>
+                            ` ).join('');
+    
+    console.log(arr);
 }
