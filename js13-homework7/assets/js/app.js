@@ -1,5 +1,5 @@
 
-    const URL = 'https://stastikh.github.io/homework7/tso-data-pb.json';
+    const URL = './homework7/tso-data-pb.json';
 
     let data = await fetch(URL);
         data = await data.json();
