@@ -1,5 +1,5 @@
 import { innCalc } from "./functions.js";
-import { createApp } from "node_modules/vue/dist/vue.esm-browser.prod.js"
+import { createApp } from "./vue/dist/vue.esm-browser.prod.js"
 
 const appConfig = {
     data() {
