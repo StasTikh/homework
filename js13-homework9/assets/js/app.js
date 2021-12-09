@@ -9,7 +9,7 @@ import { createApp } from "https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.23/vue
 createApp({
     data(){
         return {
-            title1: "Первый Период",
+            title1ST: "Первый Период",
             title2: "Второй Период",
             periodOne: {dateStart: "",
                         dateFinish: ""},
