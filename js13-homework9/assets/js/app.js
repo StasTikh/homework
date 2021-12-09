@@ -4,7 +4,7 @@
 const URL = 'https://bank.gov.ua/NBUStatService/v1/statdirectory/ovdp?json';
 const ratesURL = 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json';
 
-import { createApp } from "../../node_modules/vue/dist/vue.esm-browser.prod.js";
+import { createApp } from "https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.23/vue.esm-browser.prod.min.js";
 
 createApp({
     data(){
