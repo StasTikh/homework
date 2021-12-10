@@ -1,6 +1,7 @@
 const name = "паша";
-var testName = nameField.value; 
-testName = testName.toLowerCase();
+//var testName = nameField.value;
+let testName = prompt("Введите имя");
+nameTest = testName.toLowerCase();
 function pidorTest(){
   testField.style.display = "inline";
   header.style.display = "none"
@@ -13,7 +14,7 @@ yes.addEventListener('click', function(){
 });
 
 no.addEventListener('click', function(){
-  if(testName != name){
+  if(nameTest != name){
     pidor.innerHTML = `Пидора ответ! Понял, ${testName}?`
   } else { 
       pidor.innerHTML = `${testName} не пидор!`;
