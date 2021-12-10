@@ -1,5 +1,6 @@
-let name = "паша";
-let testName = prompt("Введите имя").toLowerCase();
+const name = "паша";
+var testName = nameField.value; 
+testName = testName. toLowerCase();
 function pidorTest(){
   testField.style.display = "inline";
   header.style.display = "none"
