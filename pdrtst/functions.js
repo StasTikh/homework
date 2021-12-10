@@ -13,7 +13,7 @@ yes.addEventListener('click', function(){
 });
 
 no.addEventListener('click', function(){
-  if(testName == !name){
+  if(testName != name){
     pidor.innerHTML = "Пидора ответ!"
   } else { 
       pidor.innerHTML = "Не пидор";
