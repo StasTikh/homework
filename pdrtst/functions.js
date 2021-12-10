@@ -14,9 +14,9 @@ yes.addEventListener('click', function(){
 
 no.addEventListener('click', function(){
   if(testName != name){
-    pidor.innerHTML = "Пидора ответ!"
+    pidor.innerHTML = `Пидора ответ! Понял, ${testName}?`
   } else { 
-      pidor.innerHTML = "Не пидор";
+      pidor.innerHTML = `${testName} не пидор!`;
   }
   buttons.style.display = "none";
   restart.style.display = "inline"
