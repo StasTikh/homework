@@ -1,6 +1,6 @@
 const name = "паша";
 var testName = nameField.value; 
-testName = testName. toLowerCase();
+testName = testName.toLowerCase();
 function pidorTest(){
   testField.style.display = "inline";
   header.style.display = "none"
