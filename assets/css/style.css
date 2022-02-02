@@ -6,8 +6,6 @@
 
 .pic {
     margin: auto;
-    display: flex;
-    justify-content : center;
 }
 .pic img {
     width: 350px;
